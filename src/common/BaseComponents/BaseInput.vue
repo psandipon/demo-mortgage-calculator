@@ -49,21 +49,21 @@ const decrement = () => {
 }
 </script>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
 .input-label {
   @apply mb-2 font-medium text-gray-700 text-lg capitalize;
 }
 
 .input-button {
-  @apply px-8 py-2 rounded-md text-3xl hover:bg-gray-50 border-none active:bg-gray-100;
+  @apply px-8 py-2 rounded-md text-3xl hover:bg-gray-200 border-none active:bg-gray-300;
 }
 
 .number-input {
-  @apply p-0  bg-gray-50  flex flex-row border-teal-300 rounded-md shadow-md;
+  @apply p-0  bg-gray-100 flex flex-row border-teal-300 rounded-md shadow-md;
 }
 
 .input-box {
-  @apply focus:ring-opacity-0 text-center outline-0 w-full bg-gray-50 text-xl;
+  @apply focus:ring-opacity-0 text-center outline-0 w-full bg-gray-100 text-xl;
 }
 
 input[type='number']::-webkit-inner-spin-button,
