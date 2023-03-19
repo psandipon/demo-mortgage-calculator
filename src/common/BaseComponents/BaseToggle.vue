@@ -46,7 +46,7 @@ const toggleValue = computed({
 }
 
 .toggle-button {
-  @apply m-2 px-8 py-2 rounded-md text-xl bg-gray-100 hover:bg-white  active:bg-gray-200 w-1/2;
+  @apply m-2 px-8 py-2 rounded-md  bg-gray-100 hover:bg-white  active:bg-gray-200 w-1/2;
 }
 
 .active {

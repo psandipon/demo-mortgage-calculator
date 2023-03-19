@@ -55,7 +55,7 @@ const decrement = () => {
 }
 
 .input-button {
-  @apply px-8 py-2 rounded-md text-3xl hover:bg-gray-200 border-none active:bg-gray-300;
+  @apply px-8 py-2 rounded-md text-2xl hover:bg-gray-200 border-none active:bg-gray-300;
 }
 
 .number-input {
@@ -63,7 +63,7 @@ const decrement = () => {
 }
 
 .input-box {
-  @apply focus:ring-opacity-0 text-center outline-0 w-full bg-white text-xl m-2 p-2 rounded-md text-teal-800 font-medium;
+  @apply focus:ring-opacity-0 text-center outline-0 w-full bg-white  m-2 p-2 rounded-md text-teal-800 font-medium;
 }
 
 input[type='number']::-webkit-inner-spin-button,
