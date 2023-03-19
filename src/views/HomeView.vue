@@ -5,9 +5,10 @@
       <hr />
 
       <div class="card">
-        <BaseToggle v-model="_realEstateCommission" label="Real Estate Commission" />
-        <BaseInput v-model="_propertyPurchasePrice" label="Property Purchase Price" class="mt-6" />
-        <BaseInput v-model="_totalSavings" label="Total Savings" class="mt-6" />
+        <BaseInput v-model="_propertyPurchasePrice" label="Property Purchase Price (€)" />
+        <BaseToggle v-model="_realEstateCommission" label="Real Estate Commission" class="mt-6" />
+        <BaseInput v-model="_totalSavings" label="Total Savings (€)" class="mt-6" />
+        <BaseInput v-model="_annualRepaymentRate" label="Annual repayment rate (%)" class="mt-6" />
       </div>
     </div>
     <div class="app-container">
@@ -26,6 +27,7 @@ import { ref } from 'vue'
 
 const _totalSavings = ref(0)
 const _propertyPurchasePrice = ref(0)
+const _annualRepaymentRate = ref(0)
 const _realEstateCommission = ref(true)
 </script>
 
