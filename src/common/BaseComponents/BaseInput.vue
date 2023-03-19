@@ -5,7 +5,7 @@
       <button class="input-button" @click="decrement">
         <span> - </span>
       </button>
-      <input type="number" v-model="inputValue" class="input-box" />
+      <input class="input-box" type="number" v-model="inputValue" />
       <button class="input-button" @click="increment">
         <span> + </span>
       </button>
@@ -63,7 +63,7 @@ const decrement = () => {
 }
 
 .input-box {
-  @apply focus:ring-opacity-0 text-center outline-0 w-full bg-gray-100 text-xl;
+  @apply focus:ring-opacity-0 text-center outline-0 w-full bg-white text-xl m-2 p-2 rounded-md text-teal-800 font-medium;
 }
 
 input[type='number']::-webkit-inner-spin-button,

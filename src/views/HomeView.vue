@@ -1,12 +1,20 @@
 <template>
-  <div class="app-container">
-    <div class="card title">Mortgage Calculator</div>
-    <hr />
+  <div class="grid md:grid-cols-1 lg:grid-cols-2 place-content-center mt-10 w-full">
+    <div class="app-container">
+      <div class="card title">Mortgage Calculator</div>
+      <hr />
 
-    <div class="card">
-      <BaseToggle v-model="_realEstateCommission" label="Real Estate Commission" />
-      <BaseInput v-model="_propertyPurchasePrice" label="Property Purchase Price" class="mt-6" />
-      <BaseInput v-model="_totalSavings" label="Total Savings" class="mt-6" />
+      <div class="card">
+        <BaseToggle v-model="_realEstateCommission" label="Real Estate Commission" />
+        <BaseInput v-model="_propertyPurchasePrice" label="Property Purchase Price" class="mt-6" />
+        <BaseInput v-model="_totalSavings" label="Total Savings" class="mt-6" />
+      </div>
+    </div>
+    <div class="app-container">
+      <div class="card title">Table</div>
+      <hr />
+
+      <div class="card"></div>
     </div>
   </div>
 </template>
@@ -23,7 +31,7 @@ const _realEstateCommission = ref(true)
 
 <style lang="postcss">
 .app-container {
-  @apply shadow-lg md:w-32 lg:w-full;
+  @apply shadow-lg w-full;
 }
 
 .card {

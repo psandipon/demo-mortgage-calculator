@@ -50,7 +50,7 @@ const toggleValue = computed({
 }
 
 .active {
-  @apply bg-white text-teal-800 font-bold;
+  @apply bg-white text-teal-800 font-medium;
 }
 
 .toggle-buttons-container {
