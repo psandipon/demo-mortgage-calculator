@@ -36,7 +36,7 @@ const inputValue = computed({
     return props.modelValue
   },
   set(_value) {
-    emit('update:modelValue', _value)
+    emit('update:modelValue', typeof _value === 'string' ? 0 : _value)
   }
 })
 

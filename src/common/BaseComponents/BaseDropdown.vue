@@ -2,7 +2,7 @@
   <div class="base-dropdown">
     <div>
       <button @click="isOpen = !isOpen" class="base-dropdown__trigger">
-        {{ selectedOption }}
+        <span class="capitalize">{{ selectedOption }}</span>
         <img
           :src="DownArrow"
           height="20"

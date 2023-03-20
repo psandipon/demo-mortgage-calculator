@@ -1,10 +1,16 @@
 <template>
-  <BaseDropdown :options="regionOptions" v-model="selectedOption" />
+  <BaseDropdown :options="regionOptions" v-model="region" />
 </template>
 
 <script setup lang="ts">
-import BaseDropdown from '@/common/BaseComponents/BaseDropdown.vue'
 import { ref } from 'vue'
+import { storeToRefs } from 'pinia'
+import { useCalculatorStore } from '@/stores/calculatorStore'
+import BaseDropdown from '@/common/BaseComponents/BaseDropdown.vue'
+
+const calculatorStore = useCalculatorStore()
+
+const { region } = storeToRefs(calculatorStore)
 
 const regionOptions = ref([
   { label: 'Berlin', value: 'Berlin' },
@@ -15,8 +21,6 @@ const regionOptions = ref([
   { label: 'Baden-wurttemberg', value: 'baden-wurttemberg' },
   { label: 'Hesse', value: 'hesse' }
 ])
-
-const selectedOption = ref('Berlin')
 </script>
 
 <style lang="postcss"></style>
