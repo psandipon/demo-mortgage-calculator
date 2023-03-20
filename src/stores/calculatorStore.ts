@@ -12,7 +12,7 @@ export const useCalculatorStore = defineStore('calculator', () => {
   const real_estate_commission = ref(true)
   const annual_repayment_rate = ref(2)
 
-  const rates_table = ref([])
+  const rates_table = ref({})
 
   const notary_costs = computed(() => 2144.0 + 0.013 * (property_price.value - 100000.0))
   const broker_costs = computed(() => {
@@ -34,6 +34,48 @@ export const useCalculatorStore = defineStore('calculator', () => {
 
   const loanToValue = computed(() => raw_loan_amount.value / property_price.value)
 
+  const fetchRatesTableData = () => {
+    const response = {
+      meta: {
+        serverTime: '2023-03-20T07:13:21+00:00',
+        status: 0,
+        key: 'OK'
+      },
+      data: {
+        root: {
+          ratesTable: {
+            '5': {
+              borrowingRate: 3.9,
+              monthlyRate: 1552.01
+            },
+            '10': {
+              borrowingRate: 3.78,
+              monthlyRate: 1520.44
+            },
+            '15': {
+              borrowingRate: 3.89,
+              monthlyRate: 1549.38
+            },
+            '20': {
+              borrowingRate: 4.24,
+              monthlyRate: 1641.45
+            },
+            '25': {
+              borrowingRate: 4.23,
+              monthlyRate: 1638.82
+            },
+            '30': {
+              borrowingRate: 5,
+              monthlyRate: 1841.37
+            }
+          }
+        }
+      }
+    }
+
+    rates_table.value = response.data.root.ratesTable
+  }
+
   return {
     region,
 
@@ -45,6 +87,8 @@ export const useCalculatorStore = defineStore('calculator', () => {
     raw_loan_amount,
     loanToValue,
 
-    rates_table
+    rates_table,
+
+    fetchRatesTableData
   }
 })

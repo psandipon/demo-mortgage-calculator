@@ -58,10 +58,6 @@ const toggleValue = computed({
   @apply p-0  bg-gray-100  flex flex-row border-teal-300 rounded-sm shadow-md;
 }
 
-/*.input-box {
-  @apply focus:ring-opacity-0 text-center outline-0 w-full bg-gray-50 text-xl;
-}*/
-
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   opacity: 0;
