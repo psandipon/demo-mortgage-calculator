@@ -42,11 +42,12 @@ const toggleValue = computed({
 
 <style scoped lang="postcss">
 .toggle-label {
-  @apply mb-2 font-medium text-gray-700 text-lg capitalize;
+  @apply mb-2 font-medium text-gray-700  capitalize;
 }
+/* text-lg */
 
 .toggle-button {
-  @apply m-2 px-8 py-2 rounded-md  bg-gray-100 hover:bg-white  active:bg-gray-200 w-1/2;
+  @apply m-2 px-8 py-2 rounded-sm  bg-gray-100 hover:bg-white  active:bg-gray-200 w-1/2;
 }
 
 .active {
@@ -54,7 +55,7 @@ const toggleValue = computed({
 }
 
 .toggle-buttons-container {
-  @apply p-0  bg-gray-100  flex flex-row border-teal-300 rounded-md shadow-md;
+  @apply p-0  bg-gray-100  flex flex-row border-teal-300 rounded-sm shadow-md;
 }
 
 /*.input-box {

@@ -51,19 +51,19 @@ const decrement = () => {
 
 <style lang="postcss" scoped>
 .input-label {
-  @apply mb-2 font-medium text-gray-700 text-lg capitalize;
+  @apply mb-2 font-medium text-gray-700  capitalize;
 }
 
 .input-button {
-  @apply px-8 py-2 rounded-md text-2xl hover:bg-gray-200 border-none active:bg-gray-300;
+  @apply px-8 py-2 rounded-sm  hover:bg-gray-200 border-none active:bg-gray-300 text-lg;
 }
 
 .number-input {
-  @apply p-0  bg-gray-100 flex flex-row border-teal-300 rounded-md shadow-md;
+  @apply p-0  bg-gray-100 flex flex-row border-teal-300 rounded-sm shadow-md;
 }
 
 .input-box {
-  @apply focus:ring-opacity-0 text-center outline-0 w-full bg-white  m-2 p-2 rounded-md text-teal-800 font-medium;
+  @apply focus:ring-opacity-0 text-center outline-0 w-full bg-white  m-2 p-2 rounded-sm text-teal-800 font-medium;
 }
 
 input[type='number']::-webkit-inner-spin-button,

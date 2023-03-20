@@ -3,17 +3,16 @@
     <div class="app-container">
       <div class="card title">Mortgage Calculator</div>
       <hr />
-
       <div class="card">
         <BaseInput v-model="property_price" label="Property Purchase Price (€)" />
-        <BaseToggle v-model="real_estate_commission" label="Real Estate Commission" class="mt-6" />
-        <BaseInput v-model="total_savings" label="Total Savings (€)" class="mt-6" />
-        <BaseInput v-model="annual_repayment_rate" label="Annual repayment rate (%)" class="mt-6" />
+        <BaseInput v-model="total_savings" label="Total Savings (€)" class="mt-3" />
+        <BaseInput v-model="annual_repayment_rate" label="Annual repayment rate (%)" class="mt-3" />
+        <BaseToggle v-model="real_estate_commission" label="Real Estate Commission" class="mt-3" />
       </div>
-      <div class="flex flex-row mb-5 m-6">
+      <div class="flex flex-row mb-5 m-6 mt-3">
         <div class="flex-1 mr-1">
-          <InfoCard title="Implied Load"
-            >{{ roundValue(raw_loan_amount).toLocaleString() }} €
+          <InfoCard title="Implied Load">
+            {{ roundValue(raw_loan_amount).toLocaleString() }} €
           </InfoCard>
         </div>
         <div class="flex-1 ml-1">
@@ -22,11 +21,15 @@
           </InfoCard>
         </div>
       </div>
+      <div
+        class="m-6 rounded-sm bg-teal-700 text-white font-bold hover:bg-teal-800 active:bg-teal-900"
+      >
+        <button class="w-full p-4">Calculate</button>
+      </div>
     </div>
     <div class="app-container flex-auto">
       <div class="card title">Mortgage Calculator</div>
       <hr />
-
       <div class="card"></div>
     </div>
   </div>
@@ -50,7 +53,7 @@ const roundValue = (_value: number) => Math.round(_value * 10) / 10
 
 <style lang="postcss">
 .app-container {
-  @apply shadow-lg;
+  @apply shadow-lg m-2;
 }
 
 .card {
