@@ -1,6 +1,6 @@
 # hypofriend-coding-challenge
 
-This is a coding challenge for [hypofriend.de]
+This is a frontend coding challenge for [hypofriend.de]
 
 # Me?
 
@@ -55,4 +55,4 @@ npm run test:unit
 ```sh
 npm run lint
 ```
-# hypofriend-coding-challenge
+

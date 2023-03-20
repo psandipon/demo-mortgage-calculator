@@ -22,5 +22,3 @@ const regionOptions = ref([
   { label: 'Hesse', value: 'hesse' }
 ])
 </script>
-
-<style lang="postcss"></style>
