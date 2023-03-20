@@ -24,6 +24,7 @@
           </InfoCard>
         </div>
       </div>
+      <!-- In a large scale app, I would like to have a BaseButton with extra props like size, loading etc -->
       <div
         class="m-6 rounded-sm bg-teal-700 text-white font-bold hover:bg-teal-800 active:bg-teal-900"
       >

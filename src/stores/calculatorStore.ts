@@ -71,7 +71,8 @@ export const useCalculatorStore = defineStore('calculator', () => {
      */
 
     /**
-     * This is just to get a mock response,
+     * Below I am mocking the response,
+     * having time I could have also added a mocking package like Miragejs https://miragejs.com/docs/advanced/graphql/
      * also we can add some delay and loading state for better user experience.
      */
 
