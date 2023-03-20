@@ -15,5 +15,3 @@ defineProps({
   }
 })
 </script>
-
-<style lang="postcss"></style>

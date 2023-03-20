@@ -1,5 +1,8 @@
 <template>
-  <div class="flex flex-col md:flex-row">
+  <div class="flex flex-col md:flex-row font-mono">
+    <!-- In a large scale app, I would extract these two main sections (calculator,rates table) in different components.  -->
+
+    <!-- calculator -->
     <div class="app-container min-w-[40%]">
       <div class="card title">Mortgage Calculator</div>
       <hr />
@@ -24,10 +27,11 @@
       <div
         class="m-6 rounded-sm bg-teal-700 text-white font-bold hover:bg-teal-800 active:bg-teal-900"
       >
-        <button class="w-full p-4" @click="calculatorStore.fetchRatesTableData">Calculate</button>
+        <button class="w-full p-4" @click="calculatorStore.fetchRatesTableData()">Calculate</button>
       </div>
     </div>
 
+    <!-- rates table -->
     <div class="app-container flex-auto">
       <div class="card title">Rates Table</div>
       <hr />
@@ -65,6 +69,6 @@ const roundValue = (_value: number) => Math.round(_value * 10) / 10
 }
 
 .title {
-  @apply text-2xl;
+  @apply text-2xl font-bold;
 }
 </style>

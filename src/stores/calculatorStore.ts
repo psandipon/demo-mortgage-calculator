@@ -2,6 +2,13 @@ import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useCalculatorStore = defineStore('calculator', () => {
+  /**
+   * `region` value can be fetched from users location
+   *  Here hard coding it.
+   *  Ideally we should have a different region store
+   *  with all the options, initial value and related getters & actions
+   *  For simplicity, add it here and hard coding the values
+   */
   const region = ref('berlin')
 
   const broker_tax = ref(0.0714)
@@ -11,8 +18,6 @@ export const useCalculatorStore = defineStore('calculator', () => {
   const total_savings = ref(80000)
   const real_estate_commission = ref(true)
   const annual_repayment_rate = ref(2)
-
-  const rates_table = ref({})
 
   const notary_costs = computed(() => 2144.0 + 0.013 * (property_price.value - 100000.0))
   const broker_costs = computed(() => {
@@ -34,7 +39,42 @@ export const useCalculatorStore = defineStore('calculator', () => {
 
   const loanToValue = computed(() => raw_loan_amount.value / property_price.value)
 
-  const fetchRatesTableData = () => {
+  /**
+   * This is the main ref which will hold the table data
+   */
+  const rates_table = ref({})
+
+  const fetchRatesTableData = async () => {
+    /**
+     * Generally I would like to add my graph ql queries here, based on user selection
+     * However, as the I don't have any working end point to work with
+     * I am not writing the actual logic.
+     *
+     * The fetching can be done using axios or vue apollo or simple fetch
+     * Below I am writing a basic axios implementation
+     *
+     * const response = await axios({
+     *     method: 'POST',
+     *     url: 'https://hypofriend.de/g',
+     *     data: {
+     *       query: `
+     *       {
+     *         root {
+     *           rates_table(property_price: 340000, repayment: 2, loan_amount: 315664, years_fixed: [5, 10, 15, 20, 25, 30])
+     *         }
+     *       }
+     *       `
+     *     }
+     *   })
+     *
+     *
+     */
+
+    /**
+     * This is just to get a mock response,
+     * also we can add some delay and loading state for better user experience.
+     */
+
     const response = {
       meta: {
         serverTime: '2023-03-20T07:13:21+00:00',
@@ -72,7 +112,6 @@ export const useCalculatorStore = defineStore('calculator', () => {
         }
       }
     }
-
     rates_table.value = response.data.root.ratesTable
   }
 
