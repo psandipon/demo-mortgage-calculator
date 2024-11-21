@@ -1,12 +1,3 @@
-# hypofriend-coding-challenge
-
-This is a frontend coding challenge for [hypofriend.de]
-
-# Me?
-
-- I am **Sandipon Paul**
-- My Email `psandipon@gmail.com`
-
 ## IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
